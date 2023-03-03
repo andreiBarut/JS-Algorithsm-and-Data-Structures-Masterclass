@@ -6,44 +6,44 @@
 
 //* MY SOLUTION - O(n^2)
 
-// const same = (arr1, arr2) => {
-// 	//create two objects which hold the keys and their respective frequencies
-// 	let isBool = false;
-// 	const objFirst = {};
-// 	const objSecond = {};
-// 	let increment = 0;
-// 	for (let i in arr1) {
-// 		let value = arr1[i];
-// 		objFirst[value] = objFirst[value] + 1 || 1;
-// 	}
-// 	for (let i in arr2) {
-// 		let value = arr2[i];
-// 		objSecond[value] = objSecond[value] + 1 || 1;
-// 	}
-// 	Object.values(objSecond).map((element) => {
-// 		if (element > 1 || Object.values(objFirst) !== Object.values(objSecond)) {
-// 			isBool = false;
-// 		}
-// 	});
-// 	Object.values(objFirst).map((element) => {
-// 		if (element > 1 || Object.values(objFirst) !== Object.values(objSecond)) {
-// 			isBool = false;
-// 		}
-// 	});
-// 	Object.keys(objFirst).map((element) => {
-// 		Object.keys(objSecond).map((elementSecond) => {
-// 			if (elementSecond == element * element) {
-// 				increment++;
-// 				if (increment === arr1.length && arr1.length === arr2.length) {
-// 					isBool = true;
-// 				}
-// 			}
-// 		});
-// 	});
-// 	return isBool;
-// };
+const same = (arr1, arr2) => {
+	//create two objects which hold the keys and their respective frequencies
+	let isBool = false;
+	const objFirst = {};
+	const objSecond = {};
+	let increment = 0;
+	for (let i in arr1) {
+		let value = arr1[i];
+		objFirst[value] = objFirst[value] + 1 || 1;
+	}
+	for (let i in arr2) {
+		let value = arr2[i];
+		objSecond[value] = objSecond[value] + 1 || 1;
+	}
+	Object.values(objSecond).map((element) => {
+		if (element > 1 || Object.values(objFirst) !== Object.values(objSecond)) {
+			isBool = false;
+		}
+	});
+	Object.values(objFirst).map((element) => {
+		if (element > 1 || Object.values(objFirst) !== Object.values(objSecond)) {
+			isBool = false;
+		}
+	});
+	Object.keys(objFirst).map((element) => {
+		Object.keys(objSecond).map((elementSecond) => {
+			if (elementSecond == element * element) {
+				increment++;
+				if (increment === arr1.length && arr1.length === arr2.length) {
+					isBool = true;
+				}
+			}
+		});
+	});
+	return isBool;
+};
 
-// console.log(same([1, 3, 2, 4], [16, 1, 4, 9]));
+console.log(same([1, 3, 2, 4], [16, 1, 4, 9]));
 
 //* OPTIMIZED SOLUTION O(n)
 
