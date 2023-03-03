@@ -88,8 +88,8 @@ const obj = { 1: 15, 2: 15, 16: 72 };
 // }
 const obj2 = { firstName: "Andrei", age: 24 };
 
+//& FINDING THE KEY IN AN OBJECT, WE HAVE TO SEARCH FOR THAT KEY AS A STRING
+
 if ("age" in obj2) {
 	console.log(true, "hi");
 }
-
-console.log("age" in obj2);
