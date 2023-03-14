@@ -1,21 +1,34 @@
 // NAIVE STRING SEARCH
 
-const findMatch = (str, match) => {
-	//wowomgzgo, omg
-	//
-	let matches = 0;
+const arr = ["a", "b", "c", "d", "b", "b"];
+let count = 0;
+for (let i in arr) {
+	if (arr[i] === "b") {
+		count++;
+	}
+}
 
-	// let index = 0;
-	for (let i in str) {
-		//o === str[4]
-		for (let j in match) {
-			if (match[j] !== str[i + j]) break;
-			if (j === short.length - 1) matches++;
+// console.log(count);
+
+// let string = "himan";
+// console.log(string.includes("him"));
+
+const findString = (longString, shortString) => {
+	let count = 0;
+	for (let i in longString) {
+		for (let j = i + 1; j < shortString.length; j++) {
+			if (shortString[j] !== longString[i]) {
+				break;
+			} else {
+				if ((j = shortString.length - 1)) {
+					count++;
+				}
+				continue;
+			}
 		}
 	}
-	return matches;
+	return count;
 };
 
-console.log(findMatch("wowomgzgo", "omg"));
-
+console.log(findString("wowomgzomgomg", "omg"));
 //!APPARENTLY THIS SOLUTION DOES NOT WORK
