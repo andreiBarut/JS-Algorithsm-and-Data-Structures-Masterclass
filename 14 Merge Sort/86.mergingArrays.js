@@ -24,4 +24,4 @@ const merge = (arr1, arr2) => {
 // while (j < arr1.length) {
 // 	arrFinal.push(arr2[j]);
 // }
-console.log(arrFinal);
+console.log(merge(arr1, arr2));

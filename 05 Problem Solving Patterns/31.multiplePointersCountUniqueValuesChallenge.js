@@ -4,10 +4,10 @@ const arr = [1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7];
 
 const countUniqueValues = (sortedArr) => {
 	const newSet = new Set(sortedArr);
-	return newSet.size;
+	return Array.from(newSet);
 };
 
-// console.log(countUniqueValues(arr));
+console.log(countUniqueValues(arr));
 
 //^another soltion
 
@@ -29,7 +29,7 @@ const countUniqueValues2 = (sortedArr) => {
 		}
 	}
 	console.log(sortedArr);
-	return count;
+	return sortedArr.slice(0, count);
 };
 
 console.log(countUniqueValues2(arr));

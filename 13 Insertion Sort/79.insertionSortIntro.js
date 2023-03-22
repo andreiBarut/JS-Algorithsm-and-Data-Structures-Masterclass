@@ -24,3 +24,5 @@ console.log(insertionSort([2, 1, 9, 76, 4]));
 //1,2,9,76,4 -> 1,2,9,76,76 ->
 //
 //[1,2,9,76, 4]
+
+//^ INSERTION sort works really well when we add elements that need to be sorted on the spot. The algorithm goes back and inserts the element exactly in its place, making only one loop until it reaches the correct place

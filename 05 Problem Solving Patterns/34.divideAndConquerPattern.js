@@ -1,5 +1,9 @@
 const search = (sortedArr, val) => {
-	console.log(sortedArr.indexOf(val));
+	for (let i in sortedArr) {
+		if (sortedArr[i] === val) {
+			return i;
+		}
+	}
 };
 
-search([1, 2, 3, 4, 5, 6], 6);
+console.log(search([1, 2, 3, 4, 5, 6], 6));
