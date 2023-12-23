@@ -71,4 +71,4 @@ const validAnagram = (str1, str2) => {
 	return true;
 };
 
-console.log(validAnagram("awesome", "awesom"));
+console.log(validAnagram("awesome", "awesome"));

@@ -38,4 +38,18 @@ const wordCount = (str) => {
 	return lettersFreq;
 };
 
-console.log(wordCount(str));
+// console.log(wordCount(str));
+
+const wordCount2 = (str) => {
+	let letterFreqObj = {};
+	str
+		.toLowerCase()
+		.split("")
+		.map((char) => {
+			letterFreqObj[char] = letterFreqObj[char] + 1 || 1;
+		});
+
+	return letterFreqObj;
+};
+
+console.log(wordCount2(str));

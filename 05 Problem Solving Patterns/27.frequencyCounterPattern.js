@@ -2,7 +2,7 @@
 
 // The pattern uses objects or sets to collect values/ frequencies of values. We do it this way so we can avoid nested loops which would give O(n^2)
 
-//^ Write a function called same, which accepts two arrays. The function should return true if every value in the array has its corresponding value square in the second array. The frequency of values must be the same.
+//^ Write a function called same, which accepts two arrays. The function should return true if every value in the array has its corresponding value squared in the second array. The frequency of values must be the same.
 
 //* MY SOLUTION - O(n^2)
 
@@ -72,6 +72,7 @@ const same2 = (arr1, arr2) => {
 		}
 		if (objSecond[key ** 2] !== objFirst[key]) {
 			//this is to check if the value of the key ^ 2 from the second object is the same as the value of the key from the first object, the key is the same (it's the key which is obtained by going through a loop through the first object) -> in other words, if the frequency of the corresponding key ^ 2 from the second object is the same frequency as the one from the same key from the first object.
+			//^ OK: now we are comparing the value of objects not the initial arrays. So we will have { '1': 1, '2': 2, '3': 1 } as objFirst, and { '1': 1, '4': 2, '9': 1 } as objSecond. So basically we are comparing objSecond[1 ** 2] to objFirst[1], then objSecond[2**2] and objFirst[2], objFirst[3**2] with objSecond[3], the keys are from the first object. But if the value corresponding to the keys from the first object correspond to the values of those same keys at the power of two in the second object, then we have the same frequency in both initial arrays.
 			return false;
 		}
 	}

@@ -34,6 +34,8 @@ const sumZero = (sortedArr) => {
 	}
 };
 
+console.log(sumZero([-3, -1, 0, 1, 2, 2, 2, 2]));
+
 const sumZero2 = (sortedArr) => {
 	let pointer1 = 0;
 	let pointer2 = pointer1 + 1;
@@ -41,10 +43,12 @@ const sumZero2 = (sortedArr) => {
 		let sum = sortedArr[pointer1] + sortedArr[pointer2];
 		if (sum === 0) {
 			return [sortedArr[pointer1], sortedArr[pointer2]];
-		} else {
+		} else if (sum > 0) {
 			pointer2++;
+		} else if (sum < 0) {
+			pointer1++;
 		}
 	}
 };
 
-console.log(sumZero2([-1, 0, 1, 1, 1, 2]));
+console.log(sumZero2([-3, -1, 0, 1, 2, 2, 2, 2]));

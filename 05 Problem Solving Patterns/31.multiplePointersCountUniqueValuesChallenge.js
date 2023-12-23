@@ -2,16 +2,18 @@ const arr = [1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7];
 
 //^ THIS is O(n);
 
-const countUniqueValues = (sortedArr) => {
-	const newSet = new Set(sortedArr);
-	return Array.from(newSet);
-};
+// const countUniqueValues = (sortedArr) => {
+// 	const newSet = new Set(sortedArr);
+// 	return Array.from(newSet);
+// };
 
-console.log(countUniqueValues(arr));
+// console.log(countUniqueValues(arr));
 
 //^another soltion
 
 //[1,1,1,2,3,3,4,4,5,6]
+
+//should ouptut this [1,2,3,4,5,6,4,4,5,6]
 
 const countUniqueValues2 = (sortedArr) => {
 	if (sortedArr.length === 0) return 0;
